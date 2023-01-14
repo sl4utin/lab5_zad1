@@ -1,5 +1,4 @@
 import requests
-from web_app import api_router
 # Перед запуском этой программы запустить main.py!
 if __name__ == '__main__':
 
