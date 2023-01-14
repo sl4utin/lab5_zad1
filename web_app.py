@@ -13,7 +13,7 @@ def pr_token():
     return id
 ##
 def filter():
-    files = os.listdir(r'C:\Users\slmax\OneDrive\Рабочий стол\ДЗ\Информатика в приложения к отрасли\Лабораторная №4\lab4_zad1')
+    files = os.listdir(r'C:\Users\slmax\OneDrive\Рабочий стол\ДЗ\Информатика в приложения к отрасли\Лабораторная №5\lab5_zad1')
     result = [0]
     ext = '.json'
     for filename in files:
@@ -46,7 +46,7 @@ def create_note(token: str):
         return 'Неверный токен'
 ##
 @api_router.get('/get_note')
-def get_note(token: str, id:int):
+def get_note(token: str, id: int):
     if token == pr_token():
         with open(str(id)+".json", "r") as file:
             notes = json.load(file)
@@ -57,7 +57,7 @@ def get_note(token: str, id:int):
         return 'Неверный токен'
 ##
 @api_router.patch('/up_note')
-def up_note(token: str, id:int, text:str):
+def up_note(token: str, id: int, text: str):
     if token == pr_token():
         with open(str(id)+".json", "r") as file:
             notes = json.load(file)
@@ -72,7 +72,7 @@ def up_note(token: str, id:int, text:str):
         return 'Неверный токен'
 ##
 @api_router.get('/get_info')
-def get_info(token: str, id:int):
+def get_info(token: str, id: int):
     if token == pr_token():
         with open(str(id)+".json", "r") as file:
             notes = json.load(file)
@@ -85,9 +85,9 @@ def get_info(token: str, id:int):
         return 'Неверный токен'
 ##
 @api_router.delete('/delete_note')
-def delete_note(token: str, id:int):
+def delete_note(token: str, id: int):
     if token == pr_token():
-        path = r'C:\Users\slmax\OneDrive\Рабочий стол\ДЗ\Информатика в приложения к отрасли\Лабораторная №4\lab4_zad1'+f'\{str(id)}.json'
+        path = r'C:\Users\slmax\OneDrive\Рабочий стол\ДЗ\Информатика в приложения к отрасли\Лабораторная №5\lab5_zad1'+f'\{str(id)}.json'
         try:
             os.remove(path)
             return f'Заметка {id} удалена'
