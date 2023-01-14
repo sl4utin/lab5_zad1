@@ -78,26 +78,3 @@ if __name__ == '__main__':
             print('\nВведите корректный номер запроса\n')
 
         inp=int(input('\nВведите номер запроса и параметры: '))
-
-
-    '''
-    @api_router.post('/create_note')
-    def create_note(token: str):
-    @api_router.get('/get_note')
-    def get_note(token: str, id:int):
-    @api_router.patch('/up_note')
-    def up_note(token: str, id:int, text:str):
-    @api_router.get('/get_info')
-    def get_info(token: str, id:int):
-    @api_router.delete('/delete_note')
-    def delete_note(token: str, id:int):
-    @api_router.get('/list_note')
-    def list_note(token: str):
-    '''
-
-
-    #response = requests.get(f"http://{HOST}:{PORT}/{token}/get_note", params={"token": token, "id": 1})
-
-
-    #print(f"Status code: {response.status_code}")
-    #print(f"Response body: {response.text}")
